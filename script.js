@@ -24,7 +24,7 @@ function fetchCardData() {
         .then(response => response.json())
         .then(data => {
             correctOrder = data.correctOrder.map(card => card.content);
-            console.log("Fetched correct order:", correctOrder);
+            console.log("Fetched correct order:");
             const randomizedOrder = shuffleArray(data.initialOrder);
             populateCards(randomizedOrder);
         })
