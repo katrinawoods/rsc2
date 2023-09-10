@@ -116,7 +116,7 @@ tickIcon.className = 'fas fa-check icon tick';
 
     const feedbackEl = document.getElementById('feedback');
     feedbackEl.textContent = isCorrect ? "Correct! Well done." : "Incorrect. Please try again.";
-}
+
 
 document.addEventListener('DOMContentLoaded', (event) => {
     cardContainer = document.getElementById('cardContainer');
