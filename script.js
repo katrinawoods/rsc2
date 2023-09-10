@@ -1,4 +1,6 @@
-// Global Variables
+document.addEventListener('DOMContentLoaded', (event) => {
+
+    // Global Variables
 let selectedCard = null;
 let correctOrder = [];
 let feedbackMode = false;
@@ -145,3 +147,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // Fetch the card data and initiate the activity
     fetchCardData();
 });
+    });
+
