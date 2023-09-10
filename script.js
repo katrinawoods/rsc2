@@ -1,6 +1,4 @@
-document.addEventListener('DOMContentLoaded', (event) => {
-
-    // Global Variables
+// Global Variables
 let selectedCard = null;
 let correctOrder = [];
 let feedbackMode = false;
@@ -20,6 +18,7 @@ function shuffleArray(array) {
     }
     return array;
 }
+
 
 function fetchCardData() {
     fetch('cards.json')
@@ -122,6 +121,13 @@ tickIcon.className = 'fas fa-check icon tick';
 
 document.addEventListener('DOMContentLoaded', (event) => {
     cardContainer = document.getElementById('cardContainer');
+
+        // Make sure cardContainer exists
+    if (!cardContainer) {
+        console.error("cardContainer element not found!");
+        return;
+    }
+
     const resetActivityButton = document.getElementById('resetActivity');
     const checkAnswerButton = document.getElementById('checkAnswer');
 
@@ -147,5 +153,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // Fetch the card data and initiate the activity
     fetchCardData();
 });
-    });
+    
 
