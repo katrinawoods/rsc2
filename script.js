@@ -96,9 +96,8 @@ function checkAnswer() {
             card.classList.add('red');
 
             // Add the cross icon for incorrect answer
-            const crossIcon = document.createElement('span');
-            crossIcon.className = 'icon cross';
-            crossIcon.innerHTML = '&#10060;';
+           const crossIcon = document.createElement('i');
+crossIcon.className = 'fas fa-times icon cross';
             card.appendChild(crossIcon);
 
             isCorrect = false;
@@ -106,9 +105,8 @@ function checkAnswer() {
             card.classList.add('green');
 
             // Add the tick icon for correct answer
-            const tickIcon = document.createElement('span');
-            tickIcon.className = 'icon tick';
-            tickIcon.innerHTML = '&#10004;';
+            const tickIcon = document.createElement('i');
+tickIcon.className = 'fas fa-check icon tick';
             card.appendChild(tickIcon);
         }
     });
