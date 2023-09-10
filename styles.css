@@ -62,7 +62,7 @@ body {
     font-size: 1.5em;
     
     /* Default state is hidden */
-    display: none;
+   // display: none;
 }
 
 /* Display specific icons based on feedback type */
