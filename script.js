@@ -83,14 +83,33 @@ function checkAnswer() {
         card.setAttribute('tabindex', '-1');
         card.classList.remove('green', 'red');
 
-        let cardContent = stripHtml(card.innerHTML).trim();
-        let correctAnswerWithoutHtml = stripHtml(correctOrder[index]).trim();
+        // Remove any existing feedback icons to reset the state
+        const existingTick = card.querySelector('.icon.tick');
+        const existingCross = card.querySelector('.icon.cross');
+        if (existingTick) card.removeChild(existingTick);
+        if (existingCross) card.removeChild(existingCross);
+
+        const cardContent = stripHtml(card.innerHTML).trim();
+        const correctAnswerWithoutHtml = stripHtml(correctOrder[index]).trim();
 
         if (cardContent !== correctAnswerWithoutHtml) {
             card.classList.add('red');
+
+            // Add the cross icon for incorrect answer
+            const crossIcon = document.createElement('span');
+            crossIcon.className = 'icon cross';
+            crossIcon.innerHTML = '&#10060;';
+            card.appendChild(crossIcon);
+
             isCorrect = false;
         } else {
             card.classList.add('green');
+
+            // Add the tick icon for correct answer
+            const tickIcon = document.createElement('span');
+            tickIcon.className = 'icon tick';
+            tickIcon.innerHTML = '&#10004;';
+            card.appendChild(tickIcon);
         }
     });
 
