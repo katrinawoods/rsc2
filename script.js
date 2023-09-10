@@ -79,7 +79,7 @@ function checkAnswer() {
     feedbackMode = true;
 
      cardContainer.classList.add('feedback-given');
-}
+
 
     cards.forEach((card, index) => {
         card.classList.add('unselectable-card');
