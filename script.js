@@ -19,7 +19,6 @@ function shuffleArray(array) {
     return array;
 }
 
-
 function fetchCardData() {
     fetch('cards.json')
         .then(response => response.json())
@@ -78,9 +77,7 @@ function checkAnswer() {
     let isCorrect = true;
 
     feedbackMode = true;
-
-     cardContainer.classList.add('feedback-given');
-
+    cardContainer.classList.add('feedback-given');
 
     cards.forEach((card, index) => {
         card.classList.add('unselectable-card');
@@ -98,31 +95,25 @@ function checkAnswer() {
 
         if (cardContent !== correctAnswerWithoutHtml) {
             card.classList.add('red');
-
-            // Add the cross icon for incorrect answer
-           const crossIcon = document.createElement('i');
-crossIcon.className = 'fas fa-times icon cross';
+            const crossIcon = document.createElement('i');
+            crossIcon.className = 'fas fa-times icon cross';
             card.appendChild(crossIcon);
-
             isCorrect = false;
         } else {
             card.classList.add('green');
-
-            // Add the tick icon for correct answer
             const tickIcon = document.createElement('i');
-tickIcon.className = 'fas fa-check icon tick';
+            tickIcon.className = 'fas fa-check icon tick';
             card.appendChild(tickIcon);
         }
     });
 
     const feedbackEl = document.getElementById('feedback');
     feedbackEl.textContent = isCorrect ? "Correct! Well done." : "Incorrect. Please try again.";
-
+}
 
 document.addEventListener('DOMContentLoaded', (event) => {
     cardContainer = document.getElementById('cardContainer');
-
-        // Make sure cardContainer exists
+    
     if (!cardContainer) {
         console.error("cardContainer element not found!");
         return;
@@ -153,5 +144,3 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // Fetch the card data and initiate the activity
     fetchCardData();
 });
-    
-
