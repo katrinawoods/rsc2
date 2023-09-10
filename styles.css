@@ -77,7 +77,7 @@ body {
 
 .red .icon.cross {
     color: var(--icon-red);
-    right: 30px;
+    right: 10px;
 }
 
 /* Card hover effect */
