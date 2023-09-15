@@ -1,0 +1,42 @@
+{
+  "version": "3.67.28569.0",
+  "course_id": "6f6f4Jcpgyy",
+  "title": "I prefer to study…",
+  "thumbnail": "story_content/thumbnail.jpg",
+  "scenes": [
+    {
+      "title": "Untitled Scene"
+    }
+  ],
+  "slides": [
+    {
+      "id": "5YTZNdSh8TZ",
+      "title": "I prefer to study…",
+      "scene_index": "1.1"
+    },
+    {
+      "id": "5rJkqeagRwd",
+      "title": "I work best when…",
+      "scene_index": "1.2"
+    },
+    {
+      "id": "6Ikd6K7zWv3",
+      "title": "In my ideal study space, I would be surrounded by…",
+      "scene_index": "1.3"
+    },
+    {
+      "id": "6eZVrdUDLlt",
+      "title": "Results Slide",
+      "scene_index": "1.4"
+    }
+  ],
+  "player": {
+    "name": "unified",
+    "width": 740,
+    "height": 560
+  },
+  "stage": {
+    "width": 720,
+    "height": 540
+  }
+}
